@@ -1,0 +1,10 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="signup">
+        <column name="signup_id" xsi:type="int" nullable="false" identity="true"/>
+        <column name="name" xsi:type="varchar" length="255" nullable="false"/>
+        <column name="date" xsi:type="date" nullable="false"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="signup_id"/>
+        </constraint>
+    </table>
+</schema>

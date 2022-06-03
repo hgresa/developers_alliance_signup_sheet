@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <custom_signup>
+            <general>
+                <signup_form_is_visible>1</signup_form_is_visible>
+            </general>
+        </custom_signup>
+    </default>
+</config>
