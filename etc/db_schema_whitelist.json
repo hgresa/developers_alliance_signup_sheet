@@ -1,0 +1,12 @@
+{
+    "signup": {
+        "column": {
+            "signup_id": true,
+            "name": true,
+            "date": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

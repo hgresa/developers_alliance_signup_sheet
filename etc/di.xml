@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Alliance\Developers2\Api\Data\SignupInterface" type="Alliance\Developers2\Model\Signup"/>
+    <preference for="Alliance\Developers2\Api\SignupRepositoryInterface" type="Alliance\Developers2\Model\ResourceModel\SignupRepository"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="alliance_developers2_signup_listing_data_source" xsi:type="string">AllianceDevelopers2SignupCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="AllianceDevelopers2SignupCollection" type="Alliance\Developers2\Ui\DataProvider\Signup\Listing\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">signup</argument>
+            <argument name="resourceModel" xsi:type="string">Alliance\Developers2\Model\ResourceModel\Signup</argument>
+        </arguments>
+    </virtualType>
+</config>

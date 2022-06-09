@@ -1,0 +1,46 @@
+<?php
+/** @var \Alliance\Developers2\Block\Signup $block */
+?>
+<?php if ($block->formIsVisible()) : ?>
+    <form class="form"
+          id="custom-form"
+          method="post"
+          action="<?= $block->getPostActionUrl() ?>"
+          autocomplete="off">
+        <fieldset class="fieldset">
+            <legend class="legend">
+                <span><?= __('Personal Information') ?></span>
+            </legend>
+            <br>
+            <div class="field required">
+                <label for="name" class="label">
+                    <span>
+                        <?= __('Name') ?>
+                    </span>
+                </label>
+                <div class="control">
+                    <input type="text"
+                           name="name"
+                           id="name"
+                           value="<?= $block->getName() ?>"
+                           title="<?= __('Name') ?>"
+                           class="input-text"
+                           data-validate="{required:true}">
+                </div>
+            </div>
+            <div class="field date required">
+                <label for="date" class="label"><span><?= __('Date') ?></span></label>
+                <div class="control">
+                    <?= $block->getDateHtml() ?>
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" title="<?php echo __('Submit') ?>">
+                    <span><?= __('Submit') ?></span></button>
+            </div>
+        </div>
+    </form>
+<?php endif; ?>
+
